@@ -19,5 +19,11 @@ def cadastro():
 def lista():
     return render_template('pessoas/lista.html', pessoas=pessoas)
 
+
+# Rota para a página inicial (index)
+@app.route('/')
+def index():
+    return render_template('app/index.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
