@@ -9,6 +9,11 @@
 
 <li class="nav-item">
   <!-- url_for aponta para o método mapeado na rota -->
+  <a class="nav-link" href="{{ url_for('fazendas_list') }}">Fazendas</a>
+</li>
+
+<li class="nav-item">
+  <!-- url_for aponta para o método mapeado na rota -->
   <a class="nav-link" href="{{ url_for('tecnicos_list') }}">Técnicos</a>
 </li>
 
@@ -18,10 +23,10 @@
 </li>
 
 <li class="nav-item">
-  <a class="nav-link disabled">Disabled</a>
+  <!-- url_for aponta para o método mapeado na rota -->
+  <a class="nav-link" href="{{ url_for('pragas_list') }}">Pragas</a>
 </li>
-{% endblock %}
-
-{% block content %}
 
 {% endblock %}
+
+{% block content %}{% endblock %}

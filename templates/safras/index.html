@@ -2,17 +2,21 @@
 
 {% block title %}Safras{% endblock %}
 
+{% block nav %} 
+<li class="nav-item active">
+  <a class="nav-link" href="/">Home</a>
+</li>
+{% endblock %}
+
 {% block content %}
     <h1>Safras</h1>
     <table class="table table-hover">
         <tr>
             <th>Nome</th>
-            <th>Idade</th>
         </tr>
-        {% for pessoa in pessoas %}
+        {% for safra in safras %}
         <tr>
-            <td>{{ pessoa.nome }}</td>
-            <td>{{ pessoa.idade }}</td>
+            <td>{{ safra.nome }}</td>
         </tr>
         {% endfor %}
     </table>

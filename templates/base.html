@@ -7,12 +7,12 @@
 </head>
 <body>
     <!-- Barra de navegação padrão  -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        Pest Monitoring</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" 
-              data-target="#navbarNav" aria-controls="navbarNav" 
-              aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Pest Monitoring</a>
+      <button class="navbar-toggler" type="button" 
+              data-toggle="collapse" data-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" 
+              aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -24,9 +24,24 @@
     </nav>
 
     <div class="container">
-        <!-- bloco para os conteúdos específicos de cada página -->
-        {% block content %}
-        {% endblock %}
+      <!-- Bloco para título do conteúdo da página  -->
+      {% block tcontent%} {% endblock %}
+     
+      <table class="table table-hover thead-dark">
+        <thead class="thead-dark">
+          <tr>
+            <!-- bloco exclusivo para cabeçalho de tabela  -->
+            {% block thead %} {% endblock %}
+          </tr>
+        </thead>
+        <!-- bloco exclusivo para dados de tabela -->
+        {% block tdata %} {% endblock %}
+      </table>
+
+      <!-- bloco para os conteúdos específicos de cada página -->
+      {% block content %}
+      {% endblock %}
+      
     </div>
 </body>
 </html>
